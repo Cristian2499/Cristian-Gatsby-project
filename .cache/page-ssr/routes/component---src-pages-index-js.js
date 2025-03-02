@@ -1729,6 +1729,16 @@ module.exports = _setPrototypeOf, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
+/***/ "./node_modules/bootstrap/dist/css/bootstrap.min.css":
+/*!***********************************************************!*\
+  !*** ./node_modules/bootstrap/dist/css/bootstrap.min.css ***!
+  \***********************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ "./node_modules/gatsby-core-utils/dist/create-content-digest.mjs":
 /*!***********************************************************************!*\
   !*** ./node_modules/gatsby-core-utils/dist/create-content-digest.mjs ***!
@@ -3580,21 +3590,58 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles.css */ "./src/pages/styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_3__);
+// src/pages/index.js
 
 
-const IndexPage = ({
+
+ // Archivo personalizado para estilos adicionales
+
+const BlogIndex = ({
   data
 }) => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Mi Blog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, data.allMarkdownRemark.edges.map(({
+  const posts = data.allMarkdownRemark.edges;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "container py-5"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "mb-4 text-center"
+  }, "Blog con Bootstrap"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "row"
+  }, posts.map(({
     node
-  }) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    key: node.id
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    to: node.fields.slug
-  }, node.frontmatter.title, " (", node.frontmatter.date, ")")))));
+  }) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    key: node.id,
+    className: "col-md-4 mb-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "card h-100 shadow-sm"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "card-body d-flex flex-column"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
+    className: "card-title"
+  }, node.frontmatter.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "card-text"
+  }, node.frontmatter.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "card-text"
+  }, node.excerpt), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: node.fields.slug,
+    className: "btn btn-primary mt-auto"
+  }, "Leer m\xE1s")))))));
 };
-const query = "2107234926";
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlogIndex);
+const pageQuery = "59848877";
+
+/***/ }),
+
+/***/ "./src/pages/styles.css":
+/*!******************************!*\
+  !*** ./src/pages/styles.css ***!
+  \******************************/
+/***/ (() => {
+
+
 
 /***/ })
 

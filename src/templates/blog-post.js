@@ -1,27 +1,38 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const BlogPost = ({ data }) => {
+const BlogPostTemplate = ({ data }) => {
   const post = data.markdownRemark;
+
   return (
-    <main>
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </main>
+    <div className="container py-5">
+      <article className="mx-auto" style={{ maxWidth: "800px" }}>
+        <h1 className="display-4">{post.frontmatter.title}</h1>
+        <p className="text-muted">{post.frontmatter.date}</p>
+        <div
+          className="content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+        <Link to="/" className="btn btn-secondary mt-4">
+          Volver al blog
+        </Link>
+      </article>
+    </div>
   );
 };
 
 export const query = graphql`
-  query ($slug: String!) {
+  query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
-        date(formatString: "YYYY-MM-DD")
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
 `;
 
-export default BlogPost;
+export default BlogPostTemplate;
+
