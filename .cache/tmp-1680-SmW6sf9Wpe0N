@@ -1,0 +1,5 @@
+
+    const cmd = require("/workspaces/Cristian-Gatsby-project/node_modules/gatsby/dist/commands/develop-process.js");
+    const args = {"_":["develop"],"verbose":false,"no-color":false,"no-colors":false,"noColors":false,"noColor":false,"json":false,"H":"localhost","host":"localhost","p":"8000","port":8000,"c":"","cert-file":"","certFile":"","k":"","key-file":"","keyFile":"","ca-file":"","caFile":"","graphql-tracing":false,"graphqlTracing":false,"$0":"gatsby","directory":"/workspaces/Cristian-Gatsby-project","browserslist":[">0.25%","not dead"],"sitePackageJson":{"name":"gatsby-blog","version":"1.0.0","private":true,"scripts":{"develop":"gatsby develop","build":"gatsby build","serve":"gatsby serve","clean":"gatsby clean"},"dependencies":{"bootstrap":"^5.3.3","gatsby":"^5.14.1","gatsby-plugin-sharp":"^5.14.0","gatsby-remark-prismjs":"^7.14.0","gatsby-source-filesystem":"^5.14.0","gatsby-transformer-remark":"^6.14.0","gatsby-transformer-sharp":"^5.14.0","prismjs":"^1.29.0","react":"^18.3.1","react-dom":"^18.3.1"}},"report":{"errorMap":{}},"useYarn":false,"proxyPort":8000,"debugInfo":null};
+    cmd(args);
+  

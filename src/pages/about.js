@@ -6,19 +6,15 @@ const AboutPage = () => (
   <div className="container py-5">
     <h1 className="mb-4 text-center">Acerca del Blog</h1>
     <p className="lead">
-      Bienvenido a nuestro blog. Aquí compartimos las últimas noticias y 
-      actualizaciones sobre deportes, con un enfoque especial en el fútbol colombiano. 
-      Nuestro objetivo es brindarte contenido relevante y actualizado, con un análisis 
-      detallado y opiniones informadas.
+      Bienvenido a Hola Mundo Blog, el espacio ideal para dar tus primeros pasos en el mundo del desarrollo. Aquí encontrarás contenido accesible y práctico pensado especialmente para principiantes.
     </p>
     <p>
-      Este blog se actualiza regularmente con artículos nuevos, crónicas de partidos 
-      y entrevistas exclusivas. Nuestro equipo de redactores trabaja para asegurarse 
-      de que siempre estés al tanto de lo más importante.
+      Nuestro objetivo es descomponer conceptos complejos y traducirlos en guías sencillas, tutoriales paso a paso y artículos inspiradores. Desde programación web y desarrollo de aplicaciones hasta buenas prácticas y herramientas útiles, te acompañaremos en cada línea de código.
     </p>
     <p>
-      Si eres un fanático del fútbol o simplemente te gusta estar informado, este es 
-      el lugar perfecto para ti. ¡Esperamos que disfrutes el contenido!
+      No importa si apenas estás escribiendo tu primer "Hello, World!" o si ya tienes algunas líneas de código en tu haber, en Hola Mundo Blog siempre habrá algo nuevo por descubrir.
+
+      ¡Sigue aprendiendo, experimentando y creciendo con nosotros!
     </p>
     <Link to="/" className="btn btn-secondary mt-4">
       Volver al Blog
